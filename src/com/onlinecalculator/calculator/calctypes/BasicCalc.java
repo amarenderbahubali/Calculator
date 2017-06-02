@@ -1,11 +1,11 @@
 package com.onlinecalculator.calculator.calctypes;
 import java.util.Scanner;
 
-class Calc1
+public class BasicCalc
 {
-	int a,b,c,res;
+	int a,b,c,ch,res;
 	
-	public Calc1()
+	public BasicCalc()
         {
 		a=0 ;
 		b=0 ;
@@ -43,17 +43,17 @@ class Calc1
     	
     	switch(c)
     	{
-    	case 1: res=add();
-               System.out.println(res);
+    	case 1: 
+               System.out.println("result"+add());
                  break;
-    	case 2: res=subtract();
-    	          System.out.println(res);
+    	case 2: 
+    	          System.out.println(subtract());
     	        break;
-    	case 3: res=multiply();
-    	          System.out.println(res);
+    	case 3: 
+    	          System.out.println(multiply());
     	           break;
-    	case 4: res=divide();
-    	   System.out.println(res);
+    	case 4: 
+    	   System.out.println(divide());
     	        break;
     	   
 	}
@@ -62,40 +62,29 @@ class Calc1
     
 	int add()
 	{
-		c=a+b;
-		return c;
+		res=a+b;
+		return res;
 	}
 	
 	int subtract()
 	{
-		c=a-b;
-		return c;
+		res=a-b;
+		return res;
 		
 	}
 	
 	int multiply()
 	{
-		c=a*b;
-		return c;
+		res=a*b;
+		return res;
 		
 	}
 	
 	int divide()
 	{
-		c=a/b;
-		return c;
+		res=a/b;
+		return res;
 		
 	}
 }
-	public class BasicCalc
-	{
-		public static void main(String args[])
-		{
-			Calc1 c =new Calc1();
-			c.menu();
-			c.userInputs();
-			c.performOperation();
 	
-
-		}
-	}
